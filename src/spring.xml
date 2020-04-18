@@ -2,27 +2,27 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"   "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
         <bean id="triangle" class="com.codewithDennis.Triangle">
-                <property name="pointA" ref="pointa"/>
-                <property name="pointB">
-                        <bean class="com.codewithDennis.Point">
-                                <property name="a" value="-20" />
-                                <property name="b" value="0" />
-                        </bean>
-                </property>
-                <property name="pointC">
-                        <bean  class="com.codewithDennis.Point">
-                                <property name="a" value="0" />
-                                <property name="b" value="20" />
-                        </bean>
+                <property name="points">
+                <list>
+                        <ref bean="pointa"/>
+                        <ref bean="pointb"/>
+                        <ref bean="pointc"/>
+                </list>
                 </property>
         </bean>
-        
-        <alias name="triangle" alias="triangle-alias"/>
 
 
         <bean id="pointa" class="com.codewithDennis.Point">
                 <property name="a" value="0" />
                 <property name="b" value="0" />
+        </bean>
+        <bean id="pointb" class="com.codewithDennis.Point">
+                <property name="a" value="-20" />
+                <property name="b" value="0" />
+        </bean>
+        <bean id="pointc" class="com.codewithDennis.Point">
+                <property name="a" value="0" />
+                <property name="b" value="20" />
         </bean>
 
 </beans>

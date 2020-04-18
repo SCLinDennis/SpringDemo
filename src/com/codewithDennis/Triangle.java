@@ -1,61 +1,22 @@
 package com.codewithDennis;
 
+import java.util.List;
+
 public class Triangle {
-//    private String type;
-//    private int height;
-//
-//    public Triangle(String type) {
-//        this.type = type;
-//    }
-//
-//    public Triangle(String type, int height) {
-//        this.type = type;
-//        this.height = height;
-//    }
-//
-//    public int getHeight() {
-//        return height;
-//    }
-//
-//    public String getType() {
-//        return type;
-//    }
+    private List<Point> points;
 
-//    public void setType(String type) {
-//        this.type = type;
-//    }
-    private Point pointA;
-    private Point pointB;
-    private Point pointC;
-
-    public Point getPointA() {
-        return pointA;
+    public List<Point> getPoints() {
+        return points;
     }
 
-    public void setPointA(Point pointA) {
-        this.pointA = pointA;
-    }
-
-    public Point getPointB() {
-        return pointB;
-    }
-
-    public void setPointB(Point pointB) {
-        this.pointB = pointB;
-    }
-
-    public Point getPointC() {
-        return pointC;
-    }
-
-    public void setPointC(Point pointC) {
-        this.pointC = pointC;
+    public void setPoints(List<Point> points) {
+        this.points = points;
     }
 
     public void draw(){
-        System.out.println("PointA=("+getPointA().getA()+','+getPointA().getB()+")");
-        System.out.println("PointB=("+getPointB().getA()+','+getPointB().getB()+")");
-        System.out.println("PointC=("+getPointC().getA()+','+getPointC().getB()+")");
+        for (Point point: points) {
+            System.out.println("PointA=(" + point.getA() + ',' + point.getB() + ")");
+        }
     }
 
 }
