@@ -1,5 +1,7 @@
 package com.codewithDennis;
 
+import java.util.List;
+
 public class Triangle {
 //    private String type;
 //    private int height;
@@ -27,6 +29,7 @@ public class Triangle {
     private Point pointA;
     private Point pointB;
     private Point pointC;
+    private List<Point> points;
 
     public Point getPointA() {
         return pointA;
