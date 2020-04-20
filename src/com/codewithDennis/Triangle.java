@@ -1,8 +1,11 @@
 package com.codewithDennis;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
 import java.util.List;
 
-public class Triangle {
+public class Triangle implements InitializingBean, DisposableBean{
 //    private String type;
 //    private int height;
 //
@@ -29,7 +32,6 @@ public class Triangle {
     private Point pointA;
     private Point pointB;
     private Point pointC;
-    private List<Point> points;
 
     public Point getPointA() {
         return pointA;
@@ -61,4 +63,11 @@ public class Triangle {
         System.out.println("PointC=("+getPointC().getA()+','+getPointC().getB()+")");
     }
 
+    public void myInit(){
+        System.out.println("My init method called for Triangle.");
+    }
+    public void cleanUp(){
+        System.out.println("My clean up method called for Triangle.");
+
+    }
 }
