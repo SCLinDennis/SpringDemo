@@ -1,6 +1,8 @@
 package com.codewithDennis;
 
-public class Triangle {
+import java.sql.SQLOutput;
+
+public class Triangle implements Shape{
 //    private String type;
 //    private int height;
 //
@@ -53,6 +55,7 @@ public class Triangle {
     }
 
     public void draw(){
+        System.out.println("Triangle Drawing");
         System.out.println("PointA=("+getPointA().getA()+','+getPointA().getB()+")");
         System.out.println("PointB=("+getPointB().getA()+','+getPointB().getB()+")");
         System.out.println("PointC=("+getPointC().getA()+','+getPointC().getB()+")");
